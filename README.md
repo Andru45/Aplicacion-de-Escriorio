@@ -39,7 +39,7 @@ Antes de descargar y ejecutar el proyecto, asegúrate de tener instalado:
    ```
 4. Abre VS Code en la carpeta del proyecto:
    ```bash
-   cd Aplicacion-de-Escriorio
+   cd Aplicacion-de-Escriorio/PharmGest
    code .
    ```
 
@@ -49,24 +49,30 @@ Antes de descargar y ejecutar el proyecto, asegúrate de tener instalado:
 2. Haz clic en el botón verde "Code"
 3. Selecciona "Download ZIP"
 4. Extrae el archivo ZIP en tu carpeta preferida
-5. Abre VS Code y selecciona `Archivo → Abrir Carpeta...` → Selecciona la carpeta extraída
+5. Abre VS Code y selecciona `Archivo → Abrir Carpeta...` → Navega a la carpeta extraída y abre la carpeta **PharmGest**
+
+> **Nota:** El repositorio contiene una carpeta llamada "PharmGest" donde está todo el código del proyecto. Asegúrate de abrir esa carpeta en VS Code.
 
 ## 🛠️ Configuración del Entorno
 
 ### 1. Crear y Activar el Entorno Virtual
 
+Una vez que hayas clonado o descargado el repositorio, navega a la carpeta **PharmGest** dentro del proyecto:
+
+```bash
+cd Aplicacion-de-Escriorio/PharmGest
+```
+
 Es importante usar un entorno virtual para aislar las dependencias del proyecto:
 
 **En Windows:**
 ```bash
-cd PharmGest
 python -m venv venv
 venv\Scripts\activate
 ```
 
 **En Mac/Linux:**
 ```bash
-cd PharmGest
 python3 -m venv venv
 source venv/bin/activate
 ```
@@ -109,13 +115,14 @@ python seed_data.py
 
 ## 🚀 Ejecutar la Aplicación
 
-Una vez configurado el entorno, ejecuta la aplicación:
+Una vez configurado el entorno, asegúrate de estar en la carpeta **PharmGest** y ejecuta la aplicación:
 
 ```bash
+# Si estás en la carpeta PharmGest
 python src/pharmgest/main.py
 ```
 
-O desde la raíz del proyecto:
+O si estás en la raíz del repositorio:
 
 ```bash
 cd PharmGest
@@ -153,19 +160,21 @@ Para mejorar tu experiencia de desarrollo, instala estas extensiones en VS Code:
 ## 📁 Estructura del Proyecto
 
 ```
-PharmGest/
-├── src/pharmgest/          # Código fuente principal
-│   ├── main.py            # Punto de entrada de la aplicación
-│   ├── config/            # Configuraciones (BD, logging, settings)
-│   ├── database/          # Modelos de base de datos
-│   ├── services/          # Servicios (generación de facturas)
-│   └── ui/                # Interfaz gráfica (widgets y diálogos)
-├── facturas/              # Carpeta donde se guardan las facturas PDF
-├── logs/                  # Registros de la aplicación
-├── create_db.py           # Script para crear la base de datos
-├── create_seller.py       # Script para crear usuario vendedor
-├── seed_data.py           # Script para datos de ejemplo
-└── pharmgest.db           # Base de datos SQLite (se crea automáticamente)
+Aplicacion-de-Escriorio/         # Repositorio raíz
+└── PharmGest/                   # Carpeta principal del proyecto
+    ├── src/pharmgest/           # Código fuente principal
+    │   ├── main.py             # Punto de entrada de la aplicación
+    │   ├── config/             # Configuraciones (BD, logging, settings)
+    │   ├── database/           # Modelos de base de datos
+    │   ├── services/           # Servicios (generación de facturas)
+    │   └── ui/                 # Interfaz gráfica (widgets y diálogos)
+    ├── facturas/               # Carpeta donde se guardan las facturas PDF
+    ├── logs/                   # Registros de la aplicación
+    ├── requirements.txt        # Dependencias del proyecto
+    ├── create_db.py            # Script para crear la base de datos
+    ├── create_seller.py        # Script para crear usuario vendedor
+    ├── seed_data.py            # Script para datos de ejemplo
+    └── pharmgest.db            # Base de datos SQLite (se crea automáticamente)
 ```
 
 ## 💡 Funcionalidades Principales

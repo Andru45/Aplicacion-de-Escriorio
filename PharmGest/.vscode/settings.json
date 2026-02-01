@@ -1,5 +1,5 @@
 {
-    "python.defaultInterpreterPath": "${workspaceFolder}/PharmGest/venv/bin/python",
+    "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
     "python.terminal.activateEnvironment": true,
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.autoImportCompletions": true,
@@ -10,6 +10,6 @@
         "**/.pytest_cache": true
     },
     "python.analysis.extraPaths": [
-        "${workspaceFolder}/PharmGest/src"
+        "${workspaceFolder}/src"
     ]
 }
